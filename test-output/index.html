@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-saucedemo" class="navigator-link">
-              <span class="suite-name border-failed">saucedemo</span>
+              <span class="suite-name border-passed">saucedemo</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-saucedemo" class="hide-methods failed suite-saucedemo"> (hide)</a> <!-- hide-methods failed suite-saucedemo -->
-                      <a href="#" panel-name="suite-saucedemo" class="show-methods failed suite-saucedemo"> (show)</a> <!-- show-methods failed suite-saucedemo -->
-                    </span>
-                    <div class="method-list-content failed suite-saucedemo">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-saucedemo" title="saucedemoPackage.loginfunction" class="method navigator-link" hash-for-method="validation">validation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-saucedemo -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -123,7 +109,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-saucedemo" title="saucedemoPackage.locked_user_saucedemo" class="method navigator-link" hash-for-method="browseURl">browseURl</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-saucedemo" title="saucedemoPackage.loginfunction" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-saucedemo" title="saucedemoPackage.locked_user_saucedemo" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-saucedemo" title="saucedemoPackage.loginfunction" class="method navigator-link" hash-for-method="validation">validation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-saucedemo -->
@@ -138,30 +139,39 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-saucedemo" class="panel saucedemo">
-          <div class="suite-saucedemo-class-failed">
+          <div class="suite-saucedemo-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">saucedemoPackage.loginfunction</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="browseURl">
+                  </a> <!-- browseURl -->
+                  <span class="method-name">browseURl</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="validation">
                   </a> <!-- validation -->
                   <span class="method-name">validation</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Swag Lab] but found [Swag Labs]
-	at saucedemoPackage.loginfunction.validation(loginfunction.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-saucedemo-class-failed -->
+          </div> <!-- suite-saucedemo-class-passed -->
           <div class="suite-saucedemo-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">saucedemoPackage.loginfunction</span>
+              <span class="class-name">saucedemoPackage.locked_user_saucedemo</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -189,13 +199,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;saucedemo&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;loginTest&quot;&gt;
-    &lt;packages&gt;
-      &lt;package name=&quot;saucedemoPackage&quot;/&gt;
-    &lt;/packages&gt;
+&lt;suite parallel=&quot;classes&quot; name=&quot;saucedemo&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;loginTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;saucedemoPackage.loginfunction&quot;/&gt;
+      &lt;class name=&quot;saucedemoPackage.locked_user_saucedemo&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- loginTest --&gt;
 &lt;/suite&gt; &lt;!-- saucedemo --&gt;
@@ -209,7 +217,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">loginTest (1 class)</span>
+                <span class="test-name">loginTest (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -235,24 +243,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'browseURl')
-data.setCell(0, 2, 'saucedemoPackage.loginfunction')
-data.setCell(0, 3, 7772);
+data.setCell(0, 2, 'saucedemoPackage.locked_user_saucedemo')
+data.setCell(0, 3, 8152);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login')
+data.setCell(1, 1, 'browseURl')
 data.setCell(1, 2, 'saucedemoPackage.loginfunction')
-data.setCell(1, 3, 4276);
+data.setCell(1, 3, 8040);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validation')
+data.setCell(2, 1, 'login')
 data.setCell(2, 2, 'saucedemoPackage.loginfunction')
-data.setCell(2, 3, 23);
+data.setCell(2, 3, 4861);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'login')
+data.setCell(3, 2, 'saucedemoPackage.locked_user_saucedemo')
+data.setCell(3, 3, 1558);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validation')
+data.setCell(4, 2, 'saucedemoPackage.loginfunction')
+data.setCell(4, 3, 23);
 window.suiteTableData['saucedemo']= { tableData: data, tableDiv: 'times-div-saucedemo'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-saucedemo">
               </div> <!-- times-div-saucedemo -->
             </div> <!-- times-div -->
@@ -283,19 +299,47 @@ return data;
                 <span class="method-name">browseURl</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">saucedemoPackage.locked_user_saucedemo</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">browseURl</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">saucedemoPackage.loginfunction</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">7787 ms</span>
+                <span class="method-start">8056 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">saucedemoPackage.locked_user_saucedemo</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">validation</span>
-                <span class="method-start">12077 ms</span>
+                <span class="method-name">login</span>
+                <span class="method-start">8157 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">saucedemoPackage.loginfunction</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">validation</span>
+                <span class="method-start">12927 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">saucedemoPackage.locked_user_saucedemo</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">close</span>
-                <span class="method-start">12112 ms</span>
+                <span class="method-start">12956 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">saucedemoPackage.loginfunction</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">close</span>
+                <span class="method-start">13084 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
